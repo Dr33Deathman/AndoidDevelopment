@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="LineOfButtons">
+        <item name="android:layout_weight">1</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">0dp</item>
+        <item name="android:weightSum">4</item>
+    </style>
+    <style name="ButtonStyle">
+        <item name="android:layout_weight">1</item>
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">match_parent</item>
+<!--        <item name="android:paddingLeft">4dp</item>-->
+<!--        <item name="android:paddingRight">4dp</item>-->
+        <item name="android:layout_marginLeft">4dp</item>
+        <item name="android:layout_marginRight">4dp</item>
+<!--        <item name="android:layout_marginTop">4dp</item>-->
+<!--        <item name="android:layout_marginBottom">4dp</item>-->
+        <item name="android:typeface">monospace</item>
+        <item name="android:textSize">12pt</item>
+        <item name="android:textColor">#00FF00</item>
+<!--        <item name="android:background">@drawable/gradient</item>-->
+    </style>
+    <style name="ButtonNumbers">
+        <item name="android:layout_weight">1</item>
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:textSize">34sp</item>
+<!--        <item name="android:textStyle">bold</item>-->
+        <item name="android:textAlignment">center</item>
+        <item name="android:gravity">center</item>
+<!--        <item name="android:background">#eeeeee</item>        -->
+        <item name="android:background">@drawable/numbers_border</item>
+        <item name="android:textColor">#111111</item>
+    </style>
+    <style name="ButtonOperations">
+        <item name="android:layout_weight">1</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">0dp</item>
+        <item name="android:textSize">34sp</item>
+<!--        <item name="android:textStyle">bold</item>-->
+        <item name="android:textAlignment">center</item>
+        <item name="android:gravity">center</item>
+<!--        <item name="android:background">#eeeeee</item>-->
+        <item name="android:background">@drawable/operations_line_divider</item>
+<!--        <item name="android:background">@drawable/operations_border</item>-->
+        <item name="android:textColor">#2992e3</item>
+    </style>
+
+</resources>

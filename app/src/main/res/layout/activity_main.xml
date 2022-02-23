@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http:// schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/editText"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2"
+        android:gravity="center|end"
+        android:text="0"
+        android:textSize="50dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="4">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="9"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+                <TextView
+                    style="@style/ButtonNumbers"
+                    android:text="7" />
+                <TextView
+                    style="@style/ButtonNumbers"
+                    android:text="8" />
+                <TextView
+                    style="@style/ButtonNumbers"
+                    android:text="9"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+                <TextView
+                    style="@style/ButtonNumbers"
+                    android:text="4" />
+                <TextView
+                    style="@style/ButtonNumbers"
+                    android:text="5" />
+                <TextView
+                    style="@style/ButtonNumbers"
+                    android:text="6"/>
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+                <TextView
+                    style="@style/ButtonNumbers"
+                    android:text="1" />
+                <TextView
+                    style="@style/ButtonNumbers"
+                    android:text="2" />
+                <TextView
+                    style="@style/ButtonNumbers"
+                    android:text="3"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+                <TextView
+                    style="@style/ButtonNumbers"
+                    android:text="0" />
+                <TextView
+                    style="@style/ButtonNumbers"
+                    android:text="." />
+                <TextView
+                    style="@style/ButtonNumbers"
+                    android:text="="/>
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="3"
+            android:orientation="vertical"
+            android:background="@drawable/operations_layout_border"
+            >
+            <ImageView
+                style="@style/ButtonOperations"
+                android:padding="25dp"
+                android:src="@drawable/ic_backspace"/>
+            <TextView
+                style="@style/ButtonOperations"
+                android:text="/"/>
+            <TextView
+                style="@style/ButtonOperations"
+                android:text="x"/>
+            <TextView
+                style="@style/ButtonOperations"
+                android:text="-"/>
+            <TextView
+                style="@style/ButtonOperations"
+                android:text="+"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="#2992e3">
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/ic_arrow_left"
+                />
+        </LinearLayout>
+
+        <!--        <LinearLayout style="@style/LineOfButtons">-->
+        <!--            <Button style="@style/ButtonStyle" android:text="C"/>-->
+        <!--            <Button style="@style/ButtonStyle" android:text="^"/>-->
+        <!--            <Button style="@style/ButtonStyle" android:text="◀"/>-->
+        <!--            <Button style="@style/ButtonStyle" android:text="/" />-->
+        <!--        </LinearLayout>-->
+        <!--        <LinearLayout style="@style/LineOfButtons">-->
+        <!--            <Button style="@style/ButtonStyle" android:text="7"/>-->
+        <!--            <Button style="@style/ButtonStyle" android:text="8"/>-->
+        <!--            <Button style="@style/ButtonStyle" android:text="9"/>-->
+        <!--            <Button style="@style/ButtonStyle" android:text="*"/>-->
+        <!--        </LinearLayout>-->
+        <!--        <LinearLayout style="@style/LineOfButtons">-->
+        <!--            <Button style="@style/ButtonStyle" android:text="4"/>-->
+        <!--            <Button style="@style/ButtonStyle" android:text="5"/>-->
+        <!--            <Button style="@style/ButtonStyle" android:text="6"/>-->
+        <!--            <Button style="@style/ButtonStyle" android:text="-"/>-->
+        <!--        </LinearLayout>-->
+        <!--        <LinearLayout style="@style/LineOfButtons">-->
+        <!--            <Button style="@style/ButtonStyle" android:text="1"/>-->
+        <!--            <Button style="@style/ButtonStyle" android:text="2"/>-->
+        <!--            <Button style="@style/ButtonStyle" android:text="3"/>-->
+        <!--            <Button style="@style/ButtonStyle" android:text="."/>-->
+        <!--        </LinearLayout>-->
+        <!--        <LinearLayout style="@style/LineOfButtons">-->
+        <!--            <Button style="@style/ButtonStyle" android:text="±"/>-->
+        <!--            <Button style="@style/ButtonStyle" android:text="0"/>-->
+        <!--            <Button style="@style/ButtonStyle" android:text="=" android:layout_weight="2" android:layout_marginLeft="8dp" android:layout_marginRight="8dp"/>-->
+        <!--        </LinearLayout>-->
+
+    </LinearLayout>
+
+
+</LinearLayout>
