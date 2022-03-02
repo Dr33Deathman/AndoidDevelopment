@@ -16,4 +16,6 @@
     <string name="multiplication">x</string>
     <string name="minus">-</string>
     <string name="plus">+</string>
+    <string name="additionalfunctions">additionalFunctions</string>
+    <string name="left_arrow"><![CDATA[<]]></string>
 </resources>
