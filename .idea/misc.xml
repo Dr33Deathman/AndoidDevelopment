@@ -5,10 +5,12 @@
       <map>
         <entry key="..\:/Documents/KBTU/AndroidDev/w4/Calculator/app/src/main/res/drawable/ic_arrow_left.xml" value="0.313" />
         <entry key="..\:/Documents/KBTU/AndroidDev/w4/Calculator/app/src/main/res/drawable/ic_backspace.xml" value="0.313" />
+        <entry key="..\:/Documents/KBTU/AndroidDev/w4/Calculator/app/src/main/res/drawable/ic_launcher_background.xml" value="0.3465" />
         <entry key="..\:/Documents/KBTU/AndroidDev/w4/Calculator/app/src/main/res/drawable/numbers_border.xml" value="0.241" />
         <entry key="..\:/Documents/KBTU/AndroidDev/w4/Calculator/app/src/main/res/drawable/operations_border.xml" value="0.3465" />
+        <entry key="..\:/Documents/KBTU/AndroidDev/w4/Calculator/app/src/main/res/drawable/operations_layout_border.xml" value="0.3465" />
         <entry key="..\:/Documents/KBTU/AndroidDev/w4/Calculator/app/src/main/res/drawable/operations_line_divider.xml" value="0.313" />
-        <entry key="..\:/Documents/KBTU/AndroidDev/w4/Calculator/app/src/main/res/layout/activity_main.xml" value="0.33" />
+        <entry key="..\:/Documents/KBTU/AndroidDev/w4/Calculator/app/src/main/res/layout/activity_main.xml" value="0.22" />
       </map>
     </option>
   </component>
