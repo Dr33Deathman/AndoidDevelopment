@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">Todo Application</string>
+    <string name="title">Title</string>
+    <string name="description">Description</string>
+    <string name="pick_date">Pick date</string>
+    <string name="pick_time">Pick time</string>
+    <string name="add_edit_todo">Add/Edit Todo</string>
+    <string name="save">Save</string>
+    <string name="network">Network</string>
+    <string name="local">Local</string>
+    <string name="login">Login</string>
+    <string name="password">Password</string>
+    <string name="register">Register</string>
+    <string name="go_back">Go back</string>
+    <string name="retry_password">Retry password</string>
+    <string name="category">Category</string>
+</resources>

@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_nav"
+    app:startDestination="@id/localNavigation">
+
+    <navigation
+        android:id="@+id/remoteNavigation"
+        app:startDestination="@id/loginFragment">
+        <fragment
+            android:id="@+id/registrationFragment"
+            android:name="kz.kamran.todoapplication.presentation.register.RegistrationFragment"
+            android:label="registration_fragment"
+            tools:layout="@layout/registration_fragment" />
+        <fragment
+            android:id="@+id/remoteFragment"
+            android:name="kz.kamran.todoapplication.presentation.remote.RemoteFragment"
+            android:label="remote_fragment"
+            tools:layout="@layout/remote_fragment">
+            <action
+                android:id="@+id/action_remoteFragment_to_todoFragment2"
+                app:destination="@id/todoFragment2" />
+        </fragment>
+        <fragment
+            android:id="@+id/loginFragment"
+            android:name="kz.kamran.todoapplication.presentation.login.LoginFragment"
+            android:label="login_fragment"
+            tools:layout="@layout/login_fragment">
+            <action
+                android:id="@+id/action_loginFragment_to_registrationFragment"
+                app:destination="@id/registrationFragment" />
+            <action
+                android:id="@+id/action_loginFragment_to_remoteFragment"
+                app:destination="@id/remoteFragment" />
+        </fragment>
+        <fragment
+            android:id="@+id/todoFragment2"
+            android:name="kz.kamran.todoapplication.presentation.add_edit.TodoFragment"
+            android:label="todo_fragment"
+            tools:layout="@layout/todo_fragment">
+            <argument
+                android:name="isLocal"
+                android:defaultValue="false"
+                app:argType="boolean" />
+            <argument
+                android:name="todo"
+                android:defaultValue="@null"
+                app:argType="kz.kamran.todoapplication.data.model.Todo"
+                app:nullable="true" />
+        </fragment>
+    </navigation>
+    <navigation
+        android:id="@+id/localNavigation"
+        app:startDestination="@id/localFragment">
+        <fragment
+            android:id="@+id/localFragment"
+            android:name="kz.kamran.todoapplication.presentation.local.LocalFragment"
+            android:label="local_fragment"
+            tools:layout="@layout/local_fragment" >
+            <action
+                android:id="@+id/action_localFragment_to_todoFragment"
+                app:destination="@id/todoFragment" />
+        </fragment>
+        <fragment
+            android:id="@+id/todoFragment"
+            android:name="kz.kamran.todoapplication.presentation.add_edit.TodoFragment"
+            android:label="todo_fragment"
+            tools:layout="@layout/todo_fragment">
+            <argument
+                android:name="isLocal"
+                android:defaultValue="true"
+                app:argType="boolean" />
+            <argument
+                android:name="todo"
+                android:defaultValue="@null"
+                app:argType="kz.kamran.todoapplication.data.model.Todo"
+                app:nullable="true" />
+        </fragment>
+    </navigation>
+</navigation>

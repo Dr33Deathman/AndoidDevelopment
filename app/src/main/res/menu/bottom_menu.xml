@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/remoteNavigation"
+        android:title="@string/network"
+        android:enabled="true"
+        android:icon="@drawable/ic_baseline_wifi_24"/>
+
+    <item
+        android:id="@+id/localNavigation"
+        android:title="@string/local"
+        android:enabled="true"
+        android:icon="@drawable/ic_baseline_storage_24"/>
+
+</menu>
