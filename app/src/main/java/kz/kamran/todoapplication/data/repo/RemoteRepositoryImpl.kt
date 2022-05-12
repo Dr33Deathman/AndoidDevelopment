@@ -7,10 +7,7 @@ import kz.kamran.todoapplication.data.remote.api.TodoApi
 import kz.kamran.todoapplication.data.remote.mapper.toCategory
 import kz.kamran.todoapplication.data.remote.mapper.toTodo
 import kz.kamran.todoapplication.data.remote.RemoteRepository
-import kz.kamran.todoapplication.data.remote.dto.CategoryRequestDto
-import kz.kamran.todoapplication.data.remote.dto.LoginRequestDto
-import kz.kamran.todoapplication.data.remote.dto.RegistrationRequestDto
-import kz.kamran.todoapplication.data.remote.dto.TodoRequestDto
+import kz.kamran.todoapplication.data.remote.dto.*
 import kz.kamran.todoapplication.data.remote.provider.UserProvider
 import kz.kamran.todoapplication.exception.InternalException
 import kz.kamran.todoapplication.exception.UnauthorizedException
@@ -59,6 +56,23 @@ class RemoteRepositoryImpl @Inject constructor(
 
     override suspend fun saveTodo(todoRequestDto: TodoRequestDto): Boolean {
         val response = todoApi.saveTodo(todoRequestDto)
+        if (!response.isSuccessful) {
+
+            // no token or invalid token
+            if (response.code() == HTTP_UNAUTHORIZED) {
+                throw UnauthorizedException()
+            }
+
+            // some server error
+            throw InternalException()
+        }
+
+        val body = response.body()!!
+        return body.success
+    }
+
+    override suspend fun updateTodo(updateTodoRequestDto: TodoUpdateRequestDto): Boolean {
+        val response = todoApi.updateTodo(updateTodoRequestDto)
         if (!response.isSuccessful) {
 
             // no token or invalid token

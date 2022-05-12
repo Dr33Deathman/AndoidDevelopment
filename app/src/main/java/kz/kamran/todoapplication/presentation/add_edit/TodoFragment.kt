@@ -111,6 +111,7 @@ class TodoFragment : Fragment() {
             with(binding) {
                 titleEditText.setText(todo!!.title)
                 descriptionEditText.setText(todo!!.description)
+                categoryEditText.setText(todo!!.category.title)
 
                 val calendar = Calendar.getInstance()
                 calendar.time = todo!!.deadline

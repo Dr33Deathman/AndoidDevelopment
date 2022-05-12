@@ -5,6 +5,7 @@ import kz.kamran.todoapplication.data.model.Todo
 import kz.kamran.todoapplication.data.remote.dto.CategoryDto
 import kz.kamran.todoapplication.data.remote.dto.TodoDto
 import kz.kamran.todoapplication.data.remote.dto.TodoRequestDto
+import kz.kamran.todoapplication.data.remote.dto.TodoUpdateRequestDto
 import java.util.*
 
 fun TodoDto.toTodo() =
@@ -23,8 +24,18 @@ fun CategoryDto.toCategory() =
         title = title
     )
 
-fun Todo.toUpdateRequestDto() =
+fun Todo.toCreateRequestDto() =
     TodoRequestDto(
+        title = title,
+        description = description,
+        isCompleted = isCompleted,
+        deadline = deadline.time,
+        categoryId = category.id
+    )
+
+fun Todo.toUpdateRequestDto() =
+    TodoUpdateRequestDto(
+        id = id,
         title = title,
         description = description,
         isCompleted = isCompleted,

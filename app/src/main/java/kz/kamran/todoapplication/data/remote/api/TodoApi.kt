@@ -1,9 +1,6 @@
 package kz.kamran.todoapplication.data.remote.api
 
-import kz.kamran.todoapplication.data.remote.dto.CategoryListResponseDto
-import kz.kamran.todoapplication.data.remote.dto.CategoryRequestDto
-import kz.kamran.todoapplication.data.remote.dto.TodoRequestDto
-import kz.kamran.todoapplication.data.remote.dto.TodoListResponseDto
+import kz.kamran.todoapplication.data.remote.dto.*
 import retrofit2.Response
 import retrofit2.http.Body
 import retrofit2.http.GET
@@ -19,6 +16,11 @@ interface TodoApi {
     @POST("todos/upsert")
     suspend fun saveTodo(
         @Body todoRequestDto: TodoRequestDto
+    ): Response<TodoListResponseDto>
+
+    @POST("todos/upsert")
+    suspend fun updateTodo(
+        @Body updateTodoRequestDto: TodoUpdateRequestDto
     ): Response<TodoListResponseDto>
 
     @POST("categories/upsert")

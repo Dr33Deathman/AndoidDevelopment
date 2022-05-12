@@ -31,6 +31,16 @@ fun Todo.toTodoEntity() =
         deadline = deadline
     )
 
+fun Todo.toTodoEntity(id: Int, categoryId: Int) =
+    TodoEntity(
+        id = id,
+        title = title,
+        description = description,
+        isCompleted = isCompleted,
+        categoryId = categoryId,
+        deadline = deadline
+    )
+
 fun Todo.toTodoEntity(categoryId: Int) =
     TodoEntity(
         title = title,

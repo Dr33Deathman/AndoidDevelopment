@@ -10,6 +10,7 @@ import kotlinx.coroutines.launch
 import kz.kamran.todoapplication.data.model.Todo
 import kz.kamran.todoapplication.data.remote.RemoteRepository
 import kz.kamran.todoapplication.data.remote.mapper.toReversedTodo
+import kz.kamran.todoapplication.data.remote.mapper.toCreateRequestDto
 import kz.kamran.todoapplication.data.remote.mapper.toUpdateRequestDto
 import kz.kamran.todoapplication.data.remote.provider.UserProvider
 import kz.kamran.todoapplication.exception.UnauthorizedException
@@ -57,7 +58,7 @@ class RemoteViewModel @Inject constructor(
             try {
                 val updatedTodo = todo.toReversedTodo()
                 val todoRequest = updatedTodo.toUpdateRequestDto()
-                remoteRepository.saveTodo(todoRequest)
+                remoteRepository.updateTodo(todoRequest)
                 getTodoList()
             } catch (e: Exception) {
                 if (e is UnauthorizedException) {
