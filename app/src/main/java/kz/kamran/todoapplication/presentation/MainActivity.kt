@@ -17,7 +17,7 @@ class MainActivity : AppCompatActivity() {
     private lateinit var navController: NavController
 
     override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
+        super.onCreate(savedInstanceState) 
         supportActionBar?.hide()
         _binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)

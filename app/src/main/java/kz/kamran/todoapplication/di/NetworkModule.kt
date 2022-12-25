@@ -21,7 +21,7 @@ import javax.inject.Singleton
 @InstallIn(SingletonComponent::class)
 class NetworkModule {
     companion object {
-        private const val BASE_URL = "http://5.182.5.92:3000/api/"
+        private const val BASE_URL = "http://d1.luckycraft.gg:3000/api/"
     }
 
     @Singleton
