@@ -110,6 +110,11 @@ class RemoteFragment : Fragment() {
                 viewModel.logout()
                 findNavController().navigateUp()
             }
+
+            refreshLayout.setOnRefreshListener {
+                viewModel.getTodoList()
+                refreshLayout.isRefreshing = false
+            }
         }
     }
 
