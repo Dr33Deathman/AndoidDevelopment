@@ -32,7 +32,7 @@ class LoginViewModel @Inject constructor(
 
     init {
         _loginState.postValue(LoginState.Loading)
-        if (!remoteRepository.isLogged()) {
+        if (remoteRepository.isLogged()) {
             _loginState.postValue(LoginState.Success)
         } else {
             _loginState.postValue(LoginState.Empty)

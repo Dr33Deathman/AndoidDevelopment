@@ -86,6 +86,12 @@ class LoginFragment : Fragment() {
             val password = passwordEditText.text.toString()
             viewModel.login(login, password)
         }
+        registrationTextView.setOnClickListener {
+            findNavController().navigate(
+                LoginFragmentDirections.actionLoginFragmentToRegistrationFragment()
+            )
+        }
+
     }
 
 

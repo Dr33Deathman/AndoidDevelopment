@@ -68,6 +68,9 @@ class RegistrationFragment : Fragment() {
             registrationButton.setOnClickListener {
                 register()
             }
+            backTextView.setOnClickListener {
+                findNavController().navigateUp()
+            }
         }
     }
 
